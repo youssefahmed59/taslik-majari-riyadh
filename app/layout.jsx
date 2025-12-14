@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "تسليك مجاري بالرياض – خدمة 24 ساعة",
   description:
