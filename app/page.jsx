@@ -18,7 +18,7 @@ export default function Home() {
               📞 اتصال مباشر
             </a>
             <a
-              href="https://wa.me/01553833455"
+              href="https://wa.me/966551316892"
               className="bg-black/20 text-white font-bold px-8 py-4 rounded-2xl border border-white"
             >
               💬 واتساب
