@@ -1,57 +1,162 @@
+// ✅ مشروع Next.js + Tailwind – موقع تسليك مجاري بالرياض
+// هذا المشروع جاهز للنشر على Vercel ومهيأ بالكامل لـ SEO العربي
+
+// =========================
+// 1️⃣ package.json
+// =========================
+{
+  "name": "taslik-majari-riyadh",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
+
+// =========================
+// 2️⃣ tailwind.config.js
+// =========================
+module.exports = {
+  content: ["./app/**/*.{js,jsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+// =========================
+// 3️⃣ app/layout.jsx
+// =========================
+export const metadata = {
+  title: "تسليك مجاري بالرياض – خدمة 24 ساعة",
+  description: "أفضل شركة تسليك مجاري بالرياض 24 ساعة. تسليك مجاري، شفط بيارات، تنظيف الصرف الصحي بأحدث المعدات في شمال وجنوب الرياض.",
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="ar" dir="rtl">
+      <body className="bg-gray-50 text-gray-900">{children}</body>
+    </html>
+  )
+}
+
+// =========================
+// 4️⃣ app/page.jsx (الصفحة الرئيسية)
+// =========================
 export default function Home() {
   return (
-    <main className="max-w-5xl mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-4">
-        تسليك مجاري بالرياض – خدمة سريعة 24 ساعة
-      </h1>
-
-      <p className="mb-6 text-lg">
-        نقدم خدمات تسليك المجاري بالرياض باستخدام أحدث المعدات، مع فريق
-        متخصص لخدمة جميع أحياء شمال وجنوب الرياض على مدار الساعة.
-      </p>
-
-      <div className="flex gap-4 mb-8">
-        <a
-          href="tel:0551316892"
-          className="bg-green-600 text-white px-6 py-3 rounded-xl"
-        >
-          اتصال مباشر
-        </a>
-        <a
-          href="https://wa.me/966551316892"
-          className="bg-blue-600 text-white px-6 py-3 rounded-xl"
-        >
-          واتساب
-        </a>
-      </div>
-
-      <section>
-        <h2 className="text-2xl font-semibold mb-3">خدماتنا</h2>
-        <ul className="list-disc pr-6 space-y-2">
-          <li>تسليك مجاري المنازل والفلل</li>
-          <li>شفط وتنظيف البيارات</li>
-          <li>تنظيف الصرف الصحي</li>
-          <li>تسليك مجاري المطابخ والحمامات</li>
-          <li>خدمة طوارئ 24 ساعة</li>
-        </ul>
+    <main className="bg-gray-50">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-l from-green-600 to-blue-600 text-white">
+        <div className="max-w-6xl mx-auto px-6 py-20 text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
+            تسليك مجاري بالرياض – خدمة 24 ساعة
+          </h1>
+          <p className="text-lg md:text-xl mb-8 leading-relaxed">
+            خدمة تسليك مجاري احترافية في جميع أحياء شمال وجنوب الرياض،
+            نصل إليك بسرعة ونستخدم أحدث المعدات.
+          </p>
+          <div className="flex justify-center gap-4 flex-wrap">
+            <a
+              href="tel:0551316892"
+              className="bg-white text-green-700 font-bold px-8 py-4 rounded-2xl shadow-lg"
+            >
+              📞 اتصال مباشر
+            </a>
+            <a
+              href="https://wa.me/966551316892"
+              className="bg-black/20 text-white font-bold px-8 py-4 rounded-2xl border border-white"
+            >
+              💬 واتساب
+            </a>
+          </div>
+        </div>
       </section>
 
-      <section className="mt-10">
-        <h2 className="text-2xl font-semibold mb-3">
-          نخدم أحياء الرياض
+      {/* Services */}
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-bold text-center mb-12">
+          خدمات تسليك المجاري
         </h2>
-        <p>
-          حي النرجس، حي العارض، حي الياسمين، حي الملقا، حي الصحافة،
-          حي التعاون، حي إشبيليه، حي الرمال، حي النهضة، حي الروضة،
-          حي اليرموك، حي المونسية، حي طويق، حي السويدي، حي الشفا،
-          حي ظهرة لبن، حي العزيزية، حي الحمراء
-        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            "تسليك مجاري المنازل",
+            "تسليك مجاري المطابخ",
+            "تسليك الحمامات",
+            "شفط وتنظيف البيارات",
+          ].map((service) => (
+            <div
+              key={service}
+              className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-xl transition"
+            >
+              <div className="text-green-600 text-4xl mb-4">✔</div>
+              <h3 className="font-bold text-lg">{service}</h3>
+              <p className="text-gray-600 mt-2">
+                خدمة سريعة وآمنة باستخدام معدات حديثة
+              </p>
+            </div>
+          ))}
+        </div>
       </section>
 
-      <footer className="mt-16 border-t pt-6">
-        <p>📞 0551316892 – 0546596882</p>
-        <p>نخدم شمال وجنوب الرياض</p>
+      {/* Trust */}
+      <section className="bg-white py-16">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+          {["خدمة 24 ساعة", "فنيون متخصصون", "سرعة الوصول", "تغطية شاملة للرياض"].map(
+            (item) => (
+              <div key={item} className="p-6">
+                <div className="text-blue-600 text-3xl mb-3">★</div>
+                <p className="font-semibold">{item}</p>
+              </div>
+            )
+          )}
+        </div>
+      </section>
+
+      {/* Areas */}
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-bold text-center mb-10">نخدم جميع أحياء الرياض</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-gray-700">
+          {[
+            "حي النرجس",
+            "حي العارض",
+            "حي الياسمين",
+            "حي الملقا",
+            "حي الصحافة",
+            "حي التعاون",
+            "حي إشبيليه",
+            "حي الرمال",
+            "حي النهضة",
+            "حي الروضة",
+            "حي اليرموك",
+            "حي المونسية",
+            "حي طويق",
+            "حي السويدي",
+            "حي الشفا",
+            "حي ظهرة لبن",
+            "حي العزيزية",
+            "حي الحمراء",
+          ].map((area) => (
+            <div key={area} className="bg-white rounded-xl p-3 shadow">
+              {area}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white text-center py-10">
+        <p className="mb-2">📞 0551316892 – 0546596882</p>
+        <p>تسليك مجاري بالرياض – نخدم شمال وجنوب الرياض</p>
       </footer>
     </main>
   );
 }
+
