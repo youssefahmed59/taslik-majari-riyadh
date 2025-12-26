@@ -73,7 +73,7 @@ export default function Home() {
      {/* صورة معدات إضافية */}
      <section className="max-w-6xl mx-auto px-6 py-16 text-center">
       <img
-    src="/images/bee3f4c2-413c-4665-83ef-989ef7640f14.jfif"
+    src="/images/12.png"
     alt="معدات تسليك مجاري متطورة بالرياض"
     className="mx-auto rounded-2xl shadow-lg max-w-3xl"
   />
