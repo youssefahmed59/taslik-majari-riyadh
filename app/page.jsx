@@ -70,6 +70,40 @@ export default function Home() {
           ))}
         </div>
       </section>
+     {/* صورة معدات إضافية */}
+     <section className="max-w-6xl mx-auto px-6 py-16 text-center">
+      <img
+    src="/images/bee3f4c2-413c-4665-83ef-989ef7640f14.jfif"
+    alt="معدات تسليك مجاري متطورة بالرياض"
+    className="mx-auto rounded-2xl shadow-lg max-w-3xl"
+  />
+
+</section>
+      {/* محتوى تعريفي */}
+<section className="max-w-6xl mx-auto px-6 py-16 leading-relaxed text-gray-800">
+  <h2 className="text-3xl font-bold mb-6 text-center">
+    شركة تسليك مجاري بالرياض
+  </h2>
+
+  <p className="mb-6 text-lg">
+    تُعد شركتنا من أفضل شركات تسليك المجاري بالرياض، حيث نقدم خدمات متكاملة
+    باستخدام أحدث الأجهزة والمعدات الحديثة التي تضمن حل المشكلة من جذورها
+    دون أي أضرار على شبكة الصرف الصحي.
+  </p>
+
+  <p className="mb-6 text-lg">
+    نمتلك فريق عمل متخصص ومدرب على أعلى مستوى للتعامل مع جميع أنواع انسداد
+    المجاري سواء في المنازل أو الفلل أو المباني التجارية، مع سرعة في الوصول
+    إلى جميع أحياء شمال وجنوب الرياض.
+  </p>
+
+  <p className="text-lg">
+    هدفنا هو تقديم خدمة موثوقة وسريعة مع الحفاظ على أعلى معايير الجودة
+    والسلامة، مما جعلنا الخيار الأول للكثير من العملاء في الرياض.
+  </p>
+</section>
+
+
 
       {/* Areas */}
       <section className="max-w-6xl mx-auto px-6 py-16">
