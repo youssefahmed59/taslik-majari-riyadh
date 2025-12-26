@@ -88,6 +88,43 @@ export default function Home() {
           ))}
         </div>
       </section>
+{/* Work Description */}
+<section className="max-w-6xl mx-auto px-6 py-16">
+  <h2 className="text-3xl font-bold text-center mb-8">وصف العمل</h2>
+  <ul className="space-y-4 text-gray-700 text-lg leading-relaxed">
+    <li>• تنفيذ موقع إلكتروني تعريفي لشركة خدمات صرف صحي</li>
+    <li>• عرض خدمات الشركة بشكل واضح وسهل</li>
+    <li>• توضيح مناطق التغطية داخل مدينة الرياض</li>
+    <li>• إضافة وسائل تواصل مباشرة مع العملاء</li>
+  </ul>
+</section>
+
+{/* Implementation Details */}
+<section className="bg-white py-16">
+  <div className="max-w-6xl mx-auto px-6">
+    <h2 className="text-3xl font-bold text-center mb-8">تفاصيل التنفيذ</h2>
+    <ul className="space-y-4 text-gray-700 text-lg leading-relaxed">
+      <li>• تصميم وتنفيذ موقع من صفحة واحدة (One Page Website)</li>
+      <li>• تصميم متجاوب يعمل على الجوال والكمبيوتر</li>
+      <li>• محتوى عربي مخصص لخدمات الصرف الصحي في الرياض</li>
+      <li>• أزرار اتصال مباشر وواتساب</li>
+      <li>• تحسين أساسي لمحركات البحث (SEO)</li>
+      <li>• إنشاء خريطة الموقع (Sitemap)</li>
+    </ul>
+  </div>
+</section>
+
+{/* Delivery & Notes */}
+<section className="max-w-6xl mx-auto px-6 py-16">
+  <h2 className="text-3xl font-bold text-center mb-8">التسليم والملاحظات</h2>
+  <ul className="space-y-4 text-gray-700 text-lg leading-relaxed">
+    <li>• تسليم موقع جاهز للعمل والنشر</li>
+    <li>• سرعة تحميل عالية ومتوافق مع جميع الأجهزة</li>
+    <li>• ربط الموقع بأدوات جوجل الأساسية</li>
+    <li>• لا يشمل إدارة إعلانات مدفوعة</li>
+    <li>• أي إضافات مستقبلية يتم الاتفاق عليها لاحقًا</li>
+  </ul>
+</section>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white text-center py-10">
