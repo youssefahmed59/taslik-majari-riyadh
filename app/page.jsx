@@ -174,27 +174,7 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Areas */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          نخدم جميع أحياء الرياض
-        </h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-gray-700">
-          {[
-            "حي النرجس", "حي العارض", "حي الياسمين", "حي الملقا",
-            "حي الصحافة", "حي التعاون", "حي إشبيليه", "حي الرمال",
-            "حي النهضة", "حي الروضة", "حي اليرموك", "حي المونسية",
-            "حي طويق", "حي السويدي", "حي الشفا", "حي ظهرة لبن",
-            "حي العزيزية", "حي الحمراء",
-          ].map((area) => (
-            <div key={area} className="bg-white rounded-xl p-3 shadow">
-              {area}
-            </div>
-          ))}
-        </div>
-      </section>
-      {/* Work Process Steps */}
+       {/* Work Process Steps */}
       <section className="max-w-6xl mx-auto px-6 py-20 text-center">
         <h2 className="text-3xl font-bold mb-12">خطوات تقديم الخدمة</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -230,6 +210,28 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Areas */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <h2 className="text-3xl font-bold text-center mb-12">
+          نخدم جميع أحياء الرياض
+        </h2>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-gray-700">
+          {[
+            "حي النرجس", "حي العارض", "حي الياسمين", "حي الملقا",
+            "حي الصحافة", "حي التعاون", "حي إشبيليه", "حي الرمال",
+            "حي النهضة", "حي الروضة", "حي اليرموك", "حي المونسية",
+            "حي طويق", "حي السويدي", "حي الشفا", "حي ظهرة لبن",
+            "حي العزيزية", "حي الحمراء",
+          ].map((area) => (
+            <div key={area} className="bg-white rounded-xl p-3 shadow">
+              {area}
+            </div>
+          ))}
+        </div>
+      </section>
+     
       {/* FAQs Section */}
       <section className="bg-gray-100 py-20">
         <div className="max-w-4xl mx-auto px-6">
