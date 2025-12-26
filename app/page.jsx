@@ -105,9 +105,6 @@ export default function Home() {
           alt="معدات متطورة لتسليك المجاري بالرياض"
           className="mx-auto rounded-2xl shadow-lg max-w-3xl"
         />
-        <p className="mt-4 text-gray-700 text-lg">
-          نستخدم أحدث التقنيات والمعدات لضمان أفضل نتيجة بأسرع وقت
-        </p>
       </section>
 
       {/* About Content */}
