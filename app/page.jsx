@@ -95,7 +95,52 @@ export default function Home() {
      <p className="mt-4 text-gray-700 text-lg">
     نستخدم تقنيات متقدمة ومعدات حديثة لضمان أفضل نتيجة بأسرع وقت
     </p>
-</section>
+    </section>
+      {/* Why Choose Us - Technology Focus */}
+      <section className="bg-gray-100 py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            لماذا تختار شركتنا لحل مشاكل الصرف الصحي؟
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h3 className="text-2xl font-bold mb-4 text-green-700">
+                تقنيات حديثة بدون تكسير
+              </h3>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                نحن نعلم أن أكبر مخاوف العملاء هو تكسير الأرضيات والجدران لإصلاح
+                السباكة. لذلك، استثمرنا في أحدث تقنيات الكشف والمعالجة التي تتيح
+                لنا تحديد مكان الانسداد بدقة وتسليكه دون الحاجة إلى إحداث أي
+                أضرار في منزلك.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "كشف التسربات والانسدادات بالكاميرات الحرارية",
+                  "تسليك بالضغط العالي (Nitrogen & Water Jetting)",
+                  "معدات شفط قوية للبيارات الرئيسية",
+                  "الحفاظ على نظافة المكان بعد الانتهاء",
+                ].map((item) => (
+                  <li key={item} className="flex items-center">
+                    <span className="bg-green-500 text-white rounded-full p-1 ml-3 text-sm">
+                      ✔
+                    </span>
+                    <span className="font-semibold">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-white p-8 rounded-3xl shadow-xl">
+                <p className="text-xl font-extrabold text-center mb-6">مشاكل نعالجها نهائياً:</p>
+                <ul className="text-gray-700 space-y-4">
+                    <li className="border-b pb-2">🔹 انسداد بالوعات المطابخ بسبب الدهون المتراكمة.</li>
+                    <li className="border-b pb-2">🔹 بطء تصريف المياه في الحمامات والمغاسل.</li>
+                    <li className="border-b pb-2">🔹 الروائح الكريهة المنبعثة من فتحات الصرف.</li>
+                    <li className="border-b pb-2">🔹 طفح البيارات الرئيسية خارج المنزل.</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       {/* Equipment Image 2 */}
@@ -146,6 +191,42 @@ export default function Home() {
           ].map((area) => (
             <div key={area} className="bg-white rounded-xl p-3 shadow">
               {area}
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* Work Process Steps */}
+      <section className="max-w-6xl mx-auto px-6 py-20 text-center">
+        <h2 className="text-3xl font-bold mb-12">خطوات تقديم الخدمة</h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {[
+            {
+              step: "1",
+              title: "الاتصال وطلب الخدمة",
+              desc: "تواصل معنا عبر الهاتف أو الواتساب، وسنقوم بتسجيل طلبك وتحديد موقعك.",
+            },
+            {
+              step: "2",
+              title: "وصول الفريق الفني",
+              desc: "يصل إليك فريقنا المجهز بأحدث المعدات في أسرع وقت ممكن.",
+            },
+            {
+              step: "3",
+              title: "الكشف والمعالجة",
+              desc: "نقوم بتحديد سبب المشكلة بدقة ونبدأ في عملية التسليك باستخدام التقنية المناسبة.",
+            },
+            {
+              step: "4",
+              title: "الاختبار والتسليم",
+              desc: "نتأكد من سريان المياه بشكل طبيعي وتنظيف المكان قبل المغادرة.",
+            },
+          ].map((item) => (
+            <div key={item.step} className="relative bg-white p-6 rounded-xl shadow-md">
+              <div className="absolute -top-5 right-1/2 translate-x-1/2 bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold text-xl">
+                {item.step}
+              </div>
+              <h3 className="font-bold text-xl mt-6 mb-3">{item.title}</h3>
+              <p className="text-gray-600">{item.desc}</p>
             </div>
           ))}
         </div>
