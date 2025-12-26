@@ -10,19 +10,19 @@ export default function Home() {
           </h1>
           <p className="text-lg md:text-xl mb-10 leading-relaxed">
             شركة متخصصة في تسليك المجاري والبيارات بالرياض باستخدام أحدث المعدات
-            وبأيدي فنيين محترفين نصل إليك في أسرع وقت.
+            وبأيدي فنيين محترفين نصل إليك في أسرع وقت. حلول نهائية لانسداد الصرف بدون تكسير.
           </p>
 
           <div className="flex justify-center gap-4 flex-wrap">
             <a
               href="tel:0551316892"
-              className="bg-white text-green-700 font-bold px-8 py-4 rounded-2xl shadow-lg"
+              className="bg-white text-green-700 font-bold px-8 py-4 rounded-2xl shadow-lg hover:bg-gray-100 transition"
             >
               📞 اتصال مباشر
             </a>
             <a
               href="https://wa.me/966551316892"
-              className="bg-black/20 text-white font-bold px-8 py-4 rounded-2xl border border-white"
+              className="bg-black/20 text-white font-bold px-8 py-4 rounded-2xl border border-white hover:bg-black/30 transition"
             >
               💬 واتساب
             </a>
@@ -30,255 +30,273 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold text-center mb-14">
-          خدمات تسليك المجاري
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            "تسليك مجاري المنازل",
-            "تسليك مجاري المطابخ",
-            "تسليك الحمامات",
-            "شفط وتنظيف البيارات",
-          ].map((service) => (
-            <div
-              key={service}
-              className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-xl transition"
-            >
-              <div className="text-green-600 text-4xl mb-4">✔</div>
-              <h3 className="font-bold text-lg mb-2">{service}</h3>
-              <p className="text-gray-600">
-                خدمة احترافية باستخدام معدات حديثة بدون تكسير
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Equipment Image 1 */}
-      <section className="max-w-6xl mx-auto px-6 py-16 text-center">
-        <img
-          src="/images/bee3f4c2-413c-4665-83ef-989ef7640f14.jfif"
-          alt="أحد معداتنا الحديثة لتسليك المجاري بالرياض"
-          className="mx-auto rounded-2xl shadow-lg mb-4 max-w-3xl"
-        />
-        <p className="text-gray-700 font-semibold text-lg">
-          أحد معداتنا الحديثة المستخدمة في تسليك المجاري
-        </p>
-      </section>
-
-      {/* Trust Section */}
-      <section className="bg-white py-20">
+      {/* Trust Section (Moved Up) */}
+      <section className="bg-white py-12 shadow-sm relative z-10 -mt-8 mx-4 rounded-3xl">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
           {[
             "خدمة على مدار 24 ساعة",
             "فنيون متخصصون",
-            "سرعة الوصول",
+            "سرعة الوصول خلال ساعة",
             "تغطية شاملة لجميع أحياء الرياض",
           ].map((item) => (
-            <div key={item} className="p-6">
-              <div className="text-blue-600 text-3xl mb-3">★</div>
-              <p className="font-semibold">{item}</p>
+            <div key={item} className="p-4 border-b md:border-b-0 md:border-l last:border-none border-gray-200">
+              <div className="text-blue-600 text-3xl mb-2">★</div>
+              <p className="font-semibold text-gray-800">{item}</p>
             </div>
           ))}
         </div>
       </section>
-    {/* صورة إضافية للخدمة */}
-    <section className="max-w-6xl mx-auto px-6 py-16 text-center">
-      <img
-        src="/images/13.jpg"
-        alt="معدات متطورة لتسليك المجاري بالرياض"
-        className="mx-auto rounded-2xl shadow-lg max-w-3xl"
-      />
-     <p className="mt-4 text-gray-700 text-lg">
-    نستخدم تقنيات متقدمة ومعدات حديثة لضمان أفضل نتيجة بأسرع وقت
-    </p>
-    </section>
-      {/* Why Choose Us - Technology Focus */}
-      <section className="bg-gray-100 py-20">
+
+      {/* Services Summary */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <h2 className="text-3xl font-bold text-center mb-14">
+          خدماتنا المتكاملة في الصرف الصحي
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { title: "تسليك مجاري المنازل", desc: "حل مشاكل الانسداد في الشقق والفلل والقصور." },
+            { title: "تسليك مجاري المطابخ", desc: "إزالة الدهون والترسبات الصلبة من مواسير المطبخ." },
+            { title: "تسليك الحمامات", desc: "معالجة انسداد الصفايات، الأحواض، والمراحيض." },
+            { title: "شفط وتنظيف البيارات", desc: "سيارات شفط حديثة لتنظيف البيارات وغرف التفتيش." },
+          ].map((service) => (
+            <div
+              key={service.title}
+              className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-xl transition group"
+            >
+              <div className="text-green-600 text-4xl mb-4 group-hover:scale-110 transition-transform">✔</div>
+              <h3 className="font-bold text-lg mb-2">{service.title}</h3>
+              <p className="text-gray-600 text-sm">
+                {service.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Equipment Image 1 - FIXED FOR MOBILE */}
+      <section className="max-w-6xl mx-auto px-6 py-10 text-center">
+        <h2 className="text-2xl font-bold mb-6">نستخدم أحدث التكنولوجيا لضمان الجودة</h2>
+        {/* ADDED 'w-full block' to ensure it fits mobile screens */}
+        <img
+          src="/images/bee3f4c2-413c-4665-83ef-989ef7640f14.jfif"
+          alt="أحد معداتنا الحديثة لتسليك المجاري بالرياض"
+          className="w-full block mx-auto rounded-2xl shadow-lg mb-4 max-w-3xl"
+        />
+      </section>
+
+       {/* Why Choose Us & Tech */}
+      <section className="bg-blue-50 py-20 my-10">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            لماذا تختار شركتنا لحل مشاكل الصرف الصحي؟
-          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-green-700">
-                تقنيات حديثة بدون تكسير
-              </h3>
+              <h2 className="text-3xl font-bold mb-6 text-blue-900">
+                حلول جذرية بدون تكسير.. لماذا نحن الأفضل؟
+              </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                نحن نعلم أن أكبر مخاوف العملاء هو تكسير الأرضيات والجدران لإصلاح
-                السباكة. لذلك، استثمرنا في أحدث تقنيات الكشف والمعالجة التي تتيح
-                لنا تحديد مكان الانسداد بدقة وتسليكه دون الحاجة إلى إحداث أي
-                أضرار في منزلك.
+                نحن ندرك حجم القلق الذي يسببه انسداد المجاري، والخوف الأكبر من اضطرار السباكين لتكسير الأرضيات.
+                لذلك، تعتمد شركتنا على استراتيجية حديثة تضمن لك الحل النهائي بأقل قدر من الإزعاج.
               </p>
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 {[
-                  "كشف التسربات والانسدادات بالكاميرات الحرارية",
-                  "معدات شفط قوية للبيارات الرئيسية",
-                  "الحفاظ على نظافة المكان بعد الانتهاء",
-                ].map((item) => (
-                  <li key={item} className="flex items-center">
-                    <span className="bg-green-500 text-white rounded-full p-1 ml-3 text-sm">
+                  {t: "تقنية الضغط العالي (النيتروجين والمياه)", d: "لإزالة أصعب الدهون والترسبات داخل المواسير."},
+                  {t: "سوست كهربائية حديثة", d: "تصل إلى أعماق بعيدة في المواسير لإزالة العوالق الصلبة."},
+                  {t: "الحفاظ على الممتلكات", d: "نضمن عدم إحداث فوضى أو تكسير غير ضروري في منزلك."},
+                  {t: "ضمان على الخدمة", d: "نقدم ضماناً يمنحك راحة البال بعد انتهاء العمل."},
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start bg-white p-4 rounded-lg shadow-sm">
+                    <span className="bg-blue-500 text-white rounded-full h-6 w-6 flex items-center justify-center ml-3 text-sm flex-shrink-0 mt-1">
                       ✔
                     </span>
-                    <span className="font-semibold">{item}</span>
+                    <div>
+                        <span className="font-bold block text-lg">{item.t}</span>
+                        <span className="text-gray-600 text-sm">{item.d}</span>
+                    </div>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-white p-8 rounded-3xl shadow-xl">
-                <p className="text-xl font-extrabold text-center mb-6">مشاكل نعالجها نهائياً:</p>
-                <ul className="text-gray-700 space-y-4">
-                    <li className="border-b pb-2">🔹 انسداد بالوعات المطابخ بسبب الدهون المتراكمة.</li>
-                    <li className="border-b pb-2">🔹 بطء تصريف المياه في الحمامات والمغاسل.</li>
-                    <li className="border-b pb-2">🔹 الروائح الكريهة المنبعثة من فتحات الصرف.</li>
-                    <li className="border-b pb-2">🔹 طفح البيارات الرئيسية خارج المنزل.</li>
-                </ul>
+            {/* Box hidden on mobile to save space, shown on PC */}
+            <div className="hidden md:block">
+                 <div className="bg-white p-8 rounded-3xl shadow-xl border-t-4 border-blue-600">
+                    <p className="text-2xl font-extrabold text-center mb-6 text-gray-800">أخطر المشاكل التي نعالجها فوراً:</p>
+                    <ul className="text-gray-700 space-y-4 text-lg">
+                        <li className="flex items-center"><span className="text-red-500 ml-2">⚠</span> انسداد كلي للمطبخ بسبب تراكم الشحوم.</li>
+                        <li className="flex items-center"><span className="text-red-500 ml-2">⚠</span> طفح مياه الصرف وارتدادها داخل الحمامات.</li>
+                        <li className="flex items-center"><span className="text-red-500 ml-2">⚠</span> الروائح الكريهة المستمرة التي تدل على انسداد عميق.</li>
+                        <li className="flex items-center"><span className="text-red-500 ml-2">⚠</span> امتلاء البيارات الرئيسية والحاجة لشفط عاجل.</li>
+                    </ul>
+                    <div className="mt-8 text-center">
+                        <a href="tel:0551316892" className="inline-block bg-blue-600 text-white font-bold px-6 py-3 rounded-xl animate-pulse">اطلب المساعدة العاجلة الآن</a>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
       </section>
 
-
-      {/* Equipment Image 2 */}
+      {/* Image Section - FIXED FOR MOBILE */}
       <section className="max-w-6xl mx-auto px-6 py-16 text-center">
-        <img
-          src="/images/12.png"
-          alt="معدات متطورة لتسليك المجاري بالرياض"
-          className="mx-auto rounded-2xl shadow-lg max-w-3xl"
-        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                {/* ADDED 'w-full' to ensure proper width on phone */}
+                <img
+                    src="/images/13.jpg"
+                    alt="معدات متطورة لتسليك المجاري بالرياض"
+                    className="w-full block mx-auto rounded-2xl shadow-lg h-64 object-cover"
+                />
+                <p className="mt-4 text-gray-700 font-semibold">
+                نستخدم أحدث أجهزة التسليك بالضغط
+                </p>
+            </div>
+            <div>
+                 {/* ADDED 'w-full' */}
+                <img
+                    src="/images/12.png"
+                    alt="فريق عمل متخصص في تسليك المجاري"
+                    className="w-full block mx-auto rounded-2xl shadow-lg h-64 object-cover"
+                />
+                <p className="mt-4 text-gray-700 font-semibold">
+                فريق فني مدرب وجاهز على مدار الساعة
+                </p>
+            </div>
+        </div>
       </section>
 
-      {/* About Content */}
-      <section className="max-w-6xl mx-auto px-6 py-20 leading-relaxed text-gray-800">
-        <h2 className="text-3xl font-bold mb-8 text-center">
-          شركة تسليك مجاري بالرياض
-        </h2>
 
-        <p className="mb-6 text-lg">
-          تُعد شركتنا من الشركات الرائدة في مجال تسليك المجاري بالرياض، حيث
-          اكتسبنا ثقة عملائنا من خلال تقديم خدمات عالية الجودة تعتمد على
-          أحدث المعدات والتقنيات الحديثة.
-        </p>
-
-        <p className="mb-6 text-lg">
-          نوفر حلولًا متكاملة لمشاكل انسداد المجاري والبيارات دون تكسير،
-          مع سرعة استجابة تغطي جميع أحياء شمال وجنوب الرياض على مدار الساعة.
-        </p>
-
-        <p className="text-lg">
-          نحرص دائمًا على تقديم أسعار تنافسية مع ضمان على الخدمة، مما يجعلنا
-          الخيار الأمثل لكل من يبحث عن خدمة موثوقة وسريعة.
-        </p>
-      </section>
-
-       {/* Work Process Steps */}
-      <section className="max-w-6xl mx-auto px-6 py-20 text-center">
-        <h2 className="text-3xl font-bold mb-12">خطوات تقديم الخدمة</h2>
+      {/* Work Process Steps */}
+      <section className="max-w-6xl mx-auto px-6 py-20 text-center bg-white rounded-3xl shadow-sm my-10 border border-gray-100">
+        <h2 className="text-3xl font-bold mb-12">كيف نخدمك؟ (خطوات العمل)</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {[
-            {
-              step: "1",
-              title: "الاتصال وطلب الخدمة",
-              desc: "تواصل معنا عبر الهاتف أو الواتساب، وسنقوم بتسجيل طلبك وتحديد موقعك.",
-            },
-            {
-              step: "2",
-              title: "وصول الفريق الفني",
-              desc: "يصل إليك فريقنا المجهز بأحدث المعدات في أسرع وقت ممكن.",
-            },
-            {
-              step: "3",
-              title: "الكشف والمعالجة",
-              desc: "نقوم بتحديد سبب المشكلة بدقة ونبدأ في عملية التسليك باستخدام التقنية المناسبة.",
-            },
-            {
-              step: "4",
-              title: "الاختبار والتسليم",
-              desc: "نتأكد من سريان المياه بشكل طبيعي وتنظيف المكان قبل المغادرة.",
-            },
+            { step: "1", title: "اتصل بنا", desc: "اتصالك هو الخطوة الأولى. فريق خدمة العملاء جاهز للرد عليك وتحديد موعد فوري." },
+            { step: "2", title: "وصول الفني", desc: "يصل فريقنا المتخصص إلى موقعك في الرياض مزوداً بكافة المعدات اللازمة." },
+            { step: "3", title: "الفحص والمعالجة", desc: "نقوم بالكشف عن مكان الانسداد بدقة واختيار الطريقة الأنسب لتسليكه بدون تكسير." },
+            { step: "4", title: "التأكد والنظافة", desc: "نجري اختبارات لضمان انسياب المياه ونقوم بتنظيف مكان العمل قبل المغادرة." },
           ].map((item) => (
-            <div key={item.step} className="relative bg-white p-6 rounded-xl shadow-md">
-              <div className="absolute -top-5 right-1/2 translate-x-1/2 bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold text-xl">
+            <div key={item.step} className="relative bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition pt-12">
+              <div className="absolute -top-5 right-1/2 translate-x-1/2 bg-gradient-to-br from-green-500 to-blue-500 text-white w-14 h-14 flex items-center justify-center rounded-full font-bold text-2xl shadow-lg border-4 border-white">
                 {item.step}
               </div>
-              <h3 className="font-bold text-xl mt-6 mb-3">{item.title}</h3>
-              <p className="text-gray-600">{item.desc}</p>
+              <h3 className="font-bold text-xl mt-4 mb-3 text-gray-800">{item.title}</h3>
+              <p className="text-gray-600 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Areas */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          نخدم جميع أحياء الرياض
+
+      {/* About Content */}
+      <section className="max-w-4xl mx-auto px-6 py-20 leading-relaxed text-gray-800 text-center md:text-right">
+        <h2 className="text-3xl font-bold mb-8 text-center text-blue-800">
+          عن شركة تسليك مجاري بالرياض
         </h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-gray-700">
-          {[
-            "حي النرجس", "حي العارض", "حي الياسمين", "حي الملقا",
-            "حي الصحافة", "حي التعاون", "حي إشبيليه", "حي الرمال",
-            "حي النهضة", "حي الروضة", "حي اليرموك", "حي المونسية",
-            "حي طويق", "حي السويدي", "حي الشفا", "حي ظهرة لبن",
-            "حي العزيزية", "حي الحمراء",
-          ].map((area) => (
-            <div key={area} className="bg-white rounded-xl p-3 shadow">
-              {area}
-            </div>
-          ))}
+        <div className="bg-white p-8 rounded-2xl shadow-md leading-loose text-lg">
+            <p className="mb-6">
+            مرحباً بكم في شركتنا الرائدة في مجال خدمات الصرف الصحي وتسليك المجاري في مدينة الرياض. نحن نفخر بتقديم خدماتنا بخبرة تمتد لسنوات طويلة، اكتسبنا خلالها ثقة الآلاف من العملاء بفضل التزامنا بالجودة، السرعة، والمصداقية في التعامل.
+            </p>
+            <p className="mb-6">
+            مهمتنا الأساسية هي توفير بيئة صحية ونظيفة لعملائنا من خلال حل مشاكل الانسداد المزعجة بأحدث الطرق العلمية. نحن لا نستخدم الطرق التقليدية التي قد تضر بشبكة الصرف لديك، بل نعتمد على التكنولوجيا المتطورة التي توفر الوقت والمال والجهد.
+            </p>
+            <p>
+            فريقنا مكون من فنيين مهرة ومدربين على أعلى مستوى للتعامل مع أصعب حالات الانسداد في المطابخ، الحمامات، والبيارات الرئيسية، مع ضمان تقديم أفضل الأسعار المنافسة في السوق.
+            </p>
         </div>
       </section>
-     
-      {/* FAQs Section */}
-      <section className="bg-gray-100 py-20">
+
+      {/* FAQs */}
+      <section className="bg-blue-50 py-20">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            أسئلة شائعة يطرحها العملاء
+          <h2 className="text-3xl font-bold text-center mb-12 text-blue-900">
+            أسئلة شائعة يطرحها عملاؤنا
           </h2>
           <div className="space-y-4">
             {[
-              {
-                q: "هل تقومون بتسليك المجاري بدون تكسير؟",
-                a: "نعم، بالتأكيد. نحن نعتمد بشكل أساسي على أجهزة ضغط المياه والهواء وسوست التسليك الكهربائية المتطورة التي تعالج الانسداد من داخل المواسير دون الحاجة لتكسير السيراميك أو الأرضيات.",
-              },
-              {
-                q: "ما هي سرعة وصولكم في حالات الطوارئ؟",
-                a: "نحن نعمل على مدار 24 ساعة، ولدينا فرق موزعة في مختلف أحياء الرياض. نسعى للوصول إليك في غضون ساعة واحدة من تلقي البلاغ في معظم الحالات.",
-              },
-              {
-                q: "هل تقدمون ضمان على خدمة التسليك؟",
-                a: "نعم، نقدم ضماناً على خدماتنا لضمان عدم عودة المشكلة مرة أخرى في القريب العاجل، وذلك حسب نوع الخدمة المقدمة وحالة التمديدات لديكم.",
-              },
-              {
-                q: "ما هي أسباب انسداد مجاري المطبخ المتكررة؟",
-                a: "السبب الرئيسي هو سكب الزيوت والدهون في الحوض، والتي تتجمد داخل المواسير وتسبب ضيقها وانسدادها مع مرور الوقت. ننصح دائماً بالتخلص من الزيوت في القمامة وليس في الصرف.",
-              },
+              { q: "هل تقومون بتسليك المجاري فعلاً بدون تكسير؟", a: "نعم، هذه هي ميزتنا الأساسية. نستخدم أجهزة ضغط متطورة وسوست كهربائية تعالج الانسداد من داخل المواسير دون الحاجة لتكسير السيراميك أو تشويه ديكور منزلك في 99% من الحالات." },
+              { q: "ما مدى سرعة وصولكم في حالات الطوارئ؟", a: "نحن ندرك أن مشاكل الصرف لا تحتمل التأجيل. لدينا فرق ميدانية موزعة في الرياض، ونسعى دائماً للوصول إليك في غضون 60 دقيقة من اتصالك." },
+              { q: "لماذا تنسد بالوعة المطبخ باستمرار؟", a: "السبب الأكثر شيوعاً هو سكب زيوت الطهي والشحوم في الحوض. هذه الدهون تتجمد داخل المواسير وتضيقها تدريجياً حتى يحدث الانسداد الكامل. ننصح دائماً بالتخلص من الزيوت في القمامة." },
+              { q: "هل تقدمون خدمات شفط البيارات؟", a: "نعم، لدينا سيارات شفط (وايتات) بأحجام مختلفة مجهزة بمضخات قوية لشفط وتنظيف البيارات الرئيسية وغرف التفتيش بكفاءة عالية." },
+              { q: "هل أسعاركم مناسبة؟", a: "نحن نقدم أفضل قيمة مقابل سعر في الرياض. أسعارنا تنافسية جداً وتعتمد على حجم المشكلة ونوع المعدات المستخدمة، ونضمن لك الشفافية التامة في التسعير قبل البدء بالعمل." },
             ].map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
-                <h3 className="font-bold text-lg text-blue-800 mb-2">
-                  ❓ {item.q}
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border-r-4 border-green-500">
+                <h3 className="font-bold text-lg text-gray-900 mb-3 flex items-center">
+                  <span className="text-green-600 ml-2 text-2xl">؟</span> {item.q}
                 </h3>
-                <p className="text-gray-700 leading-relaxed">✅ {item.a}</p>
+                <p className="text-gray-700 leading-relaxed pr-6 border-r-2 border-gray-100">✅ {item.a}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+
+      {/* Areas */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <h2 className="text-3xl font-bold text-center mb-12">
+          نغطي جميع مناطق وأحياء الرياض
+        </h2>
+        <p className="text-center text-gray-600 mb-8 -mt-6">نتواجد بالقرب منك في شمال، جنوب، شرق، وغرب الرياض لضمان سرعة الاستجابة</p>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-gray-700 font-medium">
+          {[
+            "حي النرجس", "حي العارض", "حي الياسمين", "حي الملقا",
+            "حي الصحافة", "حي التعاون", "حي الوادي", "حي النفل",
+            "حي إشبيليه", "حي الرمال", "حي اليرموك", "حي المونسية",
+            "حي النهضة", "حي الروضة", "حي الخليج", "حي الملك فيصل",
+            "حي طويق", "حي السويدي", "حي الشفا", "حي العريجاء",
+            "حي ظهرة لبن", "حي العزيزية", "حي الحمراء", "حي الدار البيضاء"
+          ].map((area) => (
+            <div key={area} className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition hover:bg-blue-50 cursor-default">
+              📍 {area}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="bg-green-600 text-white py-16 text-center px-6">
+          <h2 className="text-3xl font-bold mb-6">هل تواجه مشكلة انسداد الآن؟ لا تتردد في الاتصال</h2>
+          <p className="text-xl mb-8 opacity-90">فريقنا جاهز لخدمتك على مدار 24 ساعة طوال أيام الأسبوع</p>
+          <a
+              href="tel:0551316892"
+              className="inline-block bg-white text-green-700 font-bold text-xl px-10 py-5 rounded-full shadow-xl hover:bg-gray-100 transition transform hover:-translate-y-1"
+            >
+              📞 اتصل بنا الآن: 0551316892
+            </a>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white text-center py-12">
-        <p className="mb-3 text-lg">📞 0551316892 – 0546596882</p>
-        <p className="text-gray-300">
-          تسليك مجاري بالرياض – خدمة سريعة وموثوقة على مدار 24 ساعة
-        </p>
+        <div className="max-w-6xl mx-auto px-6 mb-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-right rtl:text-right">
+            <div>
+                <h3 className="text-xl font-bold mb-4 text-blue-400">عن الشركة</h3>
+                <p className="text-gray-400 text-sm leading-loose">شركة رائدة في مجال تسليك المجاري بالرياض، نقدم حلولاً عصرية وسريعة لمشاكل الصرف الصحي بأحدث المعدات وبدون تكسير.</p>
+            </div>
+            <div>
+                <h3 className="text-xl font-bold mb-4 text-blue-400">روابط سريعة</h3>
+                <ul className="text-gray-400 text-sm space-y-2">
+                    <li><a href="#" className="hover:text-white">الرئيسية</a></li>
+                    <li><a href="#" className="hover:text-white">خدماتنا</a></li>
+                    <li><a href="#" className="hover:text-white">مناطق الخدمة</a></li>
+                    <li><a href="#" className="hover:text-white">اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div>
+                 <h3 className="text-xl font-bold mb-4 text-blue-400">تواصل معنا</h3>
+                <p className="mb-3 text-lg dir-ltr">📞 0551316892</p>
+                <p className="mb-3 text-lg dir-ltr">📞 0546596882</p>
+                <p className="text-gray-400 text-sm">نعمل على مدار 24 ساعة</p>
+            </div>
+        </div>
+        <div className="border-t border-gray-800 pt-8">
+            <p className="text-gray-500 text-sm">
+            جميع الحقوق محفوظة © {new Date().getFullYear()} - شركة تسليك مجاري بالرياض
+            </p>
+        </div>
       </footer>
 
     </main>
   );
 }
-
 
 
